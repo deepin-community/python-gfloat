@@ -1,0 +1,1 @@
+extend-diff-ignore="src/gfloat.(egg-info|dist-info)/"

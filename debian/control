@@ -1,15 +1,55 @@
-Source: template-repository
-Section: unknown
+Source: python-gfloat
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Scott Kitterman <scott@kitterman.com>
+Build-Depends: debhelper-compat (= 13),
+               pybuild-plugin-pyproject, python3-setuptools,
+               python3-all,
+               python3-myst-nb <!nodoc>,
+               python3-numpy <!nodoc>,
+               python3-sphinx <!nodoc>,
+               python3-sphinx-paramlinks <!nodoc>,
+               python3-sphinx-rtd-theme <!nodoc>,
+Standards-Version: 4.7.0
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-gfloat.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-gfloat
+Homepage: https://github.com/graphcore-research/gfloat
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-gfloat
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends},
+Suggests: python-gfloat-doc
+Description: Python module of generic floating point encode/decode logic
+ An implementation of generic floating point encode/decode logic, handling
+ various current and proposed floating point types:
+ .
+   - IEEE 754: Binary16, Binary32
+   - OCP Float8: E5M2, E4M3
+   - IEEE WG P3109: P{p} for p in 1..7
+   - OCP MX Formats: E2M1, M2M3, E3M2, E8M0, INT8, and the MX block formats.
+ .
+ The library favours readability and extensibility over speed - for fast
+ implementations of these datatypes see, for example, ml_dtypes, bitstring, MX
+ PyTorch Emulation Library.
+
+Package: python-gfloat-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Description: documentation for the gfloat Python library
+ An implementation of generic floating point encode/decode logic, handling 
+ various current and proposed floating point types:
+ .
+   - IEEE 754: Binary16, Binary32
+   - OCP Float8: E5M2, E4M3
+   - IEEE WG P3109: P{p} for p in 1..7
+   - OCP MX Formats: E2M1, M2M3, E3M2, E8M0, INT8, and the MX block formats.
+ .
+ The library favours readability and extensibility over speed - for fast 
+ implementations of these datatypes see, for example, ml_dtypes, bitstring, MX 
+ PyTorch Emulation Library.
+ .
+ This package provides documentation for python3-gfloat.
