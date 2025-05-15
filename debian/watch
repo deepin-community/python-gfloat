@@ -1,0 +1,4 @@
+version=4
+# try also https://pypi.debian.net/pylsqpack/watch
+opts=uversionmangle=s/(rc|a|b|c)/~$1/ \
+https://pypi.debian.net/gfloat/gfloat-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

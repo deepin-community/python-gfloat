@@ -1,5 +1,23 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-gfloat (0.3-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 13 Jun 2024 00:15:48 -0400
+
+python-gfloat (0.2.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 28 May 2024 09:59:43 -0400
+
+python-gfloat (0.1-2) unstable; urgency=medium
+
+  * No change upload to build binaries on buildd
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 08 May 2024 21:31:55 -0400
+
+python-gfloat (0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #1070718)
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 07 May 2024 15:47:03 -0400
